@@ -1,0 +1,37 @@
+﻿using Blaguotech.Areas.Models;
+@model List<Blaguotech.Areas.Models.ArticleModel>
+
+    @{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Liste des articles</h1>
+
+<div class="card">
+    <div class="card-header">Articles</div>
+    <div class="card-body">
+        <div class="tables-responsive">
+            <table class="table">
+                <thread>
+                    <tr>
+                        <th>Id</th>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Note</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    @foreach (var article in Model.OrderBy(a => a.Id))
+                    {
+                        <tr>
+                            <td>@article.Id</td>
+                            <td><a asp-action="Edit" asp-route-id=@article.Id>@article.Titre</a></td>
+                            <td>@article.Auteur</td>
+                            <td>@article.Note</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

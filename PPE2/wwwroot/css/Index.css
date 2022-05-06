@@ -1,0 +1,26 @@
+﻿#center {
+    width: 400px;
+    height: 150px;
+    border: 5px solid red;
+    background-color: lightgreen;
+    object-fit: none;
+    object-position: center top;
+}
+
+#left {
+    width: 100%;
+    height: 300px;
+    border: none;
+    background-color: none;
+    object-fit: none;
+    
+}
+
+#right {
+    width: 400px;
+    height: 300px;
+    border: none;
+    background-color: none;
+    object-fit: none;
+    
+}
